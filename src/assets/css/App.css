@@ -1,0 +1,67 @@
+.App {
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #b0c4de;
+  padding: 0;
+  margin: 0;
+}
+
+h1,h2,h3,h4,p{
+  font-family: 'Libre Baskerville', serif;
+  margin: 0;
+}
+
+/*タイトル*/
+.header{
+  border: .5rem solid;
+  background-color: rgb(17, 62, 101);
+  padding: 0.5rem;
+  
+}
+
+.title{
+  margin: 0;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 0 0 20px #fff;
+}
+
+/*入力*/
+.partsHeader{
+  margin: 0.5rem;
+}
+
+.inputCon{
+  display: flex;
+  justify-content: space-around;
+}
+
+select{
+  font-size: 17px;
+  height: 35px;
+  margin: 0.8rem 0.5rem; 
+}
+
+/*出力*/
+.specBox{
+  border: .5rem solid;
+  margin: 2rem;
+}
+
+.specLine{
+  width: 80%;
+  color: black;
+}
+
+.specHeader{
+  margin: 0;
+}
+
+.specDisplay{
+  display: flex;
+  justify-content: space-around;
+
+}
+
