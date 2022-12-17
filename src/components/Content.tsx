@@ -1,3 +1,5 @@
+import {memo} from "react";
+
 import CPU from './parts/CPU';
 import GPU from './parts/GPU';
 import MemoryCard from './parts/memoryCard';
@@ -6,7 +8,7 @@ import Results from './Result';
 
 // 後で変更 memoをつけるかどうかはあとで検討
 
-const Content = () => {
+const Content = memo(() => {
     return (
         <>
             <CPU/>
@@ -17,6 +19,6 @@ const Content = () => {
         </>
     );
 
-};
+});
 
 export default Content;

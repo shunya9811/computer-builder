@@ -1,7 +1,18 @@
 import { useEffect } from "react";
 import { Box } from '@mui/material';
 
+import { usePcContext } from "../../context";
+
 const GPU = () => {
+    const {
+        setGpuList,
+        setGpuHashmap,
+        setBrand,
+        setModel,
+        createBrandList,
+        createModelList,
+        gpuList
+    } = usePcContext();
 
     useEffect(() => {
         const fetchGPUData = async () => {
@@ -11,9 +22,24 @@ const GPU = () => {
         };
 
         fetchGPUData().then((list) => {
-            console.log(list);
+            setGpuList(list);
+
+            let hashmap = new Map<string, number>();
+            for (let i = 0; i < list.length; i++){
+                hashmap.set(list[i].Model, list[i].Benchmark);
+            }
+
+            setGpuHashmap(hashmap);
         })
     }, []);
+
+    const brandHandleChange = (event: any) => {
+        setBrand(event.target.value, "gpu");
+    }
+
+    const modelHandleChange = (event: any) => {
+        setModel(event.target.value, "gpu");
+    }
 
     return(
         
@@ -46,14 +72,24 @@ const GPU = () => {
             >
                 <div className="inputCon">
                     <p className="form-label">Brand</p>
-                    <select name="brand" id="gpu-brand-select" style={{width: "200px"}}>
-                        <option value="Brand" selected>Brand</option>
+                    <select name="brand" id="gpu-brand-select" style={{width: "200px"}} onChange={brandHandleChange}>
+                        <option value="-">-</option>
+                        {createBrandList(gpuList).map((brand, index) => {
+                            return (
+                                <option value={brand} key={index}>{brand}</option>
+                            )
+                        })}
                     </select>
                 </div>
                 <div className="inputCon">
                     <p className="form-label">Model</p>
-                    <select name="model" id="gpu-model-select" style={{width: "200px"}}>
-                        <option value="Model" selected>Model</option>
+                    <select name="model" id="gpu-model-select" style={{width: "200px"}} onChange={modelHandleChange}>
+                        <option value="-">-</option>
+                        {createModelList(gpuList, "GPU").map((model, index) => {
+                            return (
+                                <option value={model} key={index}>{model}</option>
+                            )
+                        })}
                     </select>
                 </div>
             </Box>

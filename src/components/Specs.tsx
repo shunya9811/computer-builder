@@ -1,4 +1,22 @@
+import { usePcContext } from "../context";
+
 const Specs = () => {
+
+    const {
+        cpuBrand,
+        cpuModel,
+        gpuBrand,
+        gpuModel,
+        ramBrand,
+        ramModel,
+        hddOrssd,
+        capacity,
+        storageBrand,
+        storageModel,
+        calculateGamingPC,
+        calculateWorkingPC
+    } = usePcContext();
+
     return (
         <div className="specBox">
             <div className="m-2 pt-3 d-flex justify-content-center">
@@ -8,40 +26,40 @@ const Specs = () => {
                 <h2 className="specHeader">CPU</h2>
                 <hr className="specLine"></hr>
                 <div className="specDisplay">
-                    <h4>Brand: AMD</h4>
-                    <h4>Model: Ryzen 9 5950X</h4>
+                    <h3>Brand: {cpuBrand}</h3>
+                    <h3>Model: {cpuModel}</h3>
                 </div>
             </div>
             <div className="m-2 pt-3 d-flex flex-column">
                 <h2 className="specHeader">GPU</h2>
                 <hr className="specLine"></hr>
                 <div className="specDisplay">
-                    <h4>Brand: Nvidia</h4>
-                    <h4>Model: Quadro RTX A6000</h4>
+                    <h3>Brand: {gpuBrand}</h3>
+                    <h3>Model: {gpuModel}</h3>
                 </div>
             </div>
             <div className="m-2 pt-3 d-flex flex-column">
                 <h2 className="specHeader">RAM</h2>
                 <hr className="specLine"></hr>
                 <div className="specDisplay">
-                    <h4>Brand: Crucial</h4>
-                    <h4>Model: Ballistix Sport LT DDR4 2400 C16 2x8GB</h4>
+                    <h3>Brand: {ramBrand}</h3>
+                    <h3>Model: {ramModel}</h3>
                 </div>
             </div>
             <div className="m-2 pt-3 d-flex flex-column">
                 <h2 className="specHeader">Storage</h2>
                 <hr className="specLine"></hr>
                 <div className="specDisplay">
-                    <h4>Disk: SSD</h4>
-                    <h4>Storage: 1TB</h4>
-                    <h4>Brand: Samsung</h4>
-                    <h4>Model: 970 Evo Plus NVMe PCIe M.2 1TB</h4>
+                    <h3>Disk: {hddOrssd}</h3>
+                    <h3>Storage: {capacity}</h3>
+                    <h3>Brand: {storageBrand}</h3>
+                    <h3>Model: {storageModel}</h3>
                 </div>
             </div>
             <hr style={{color: "black", width: "90%"}}></hr>
             <div className="specDisplay">
-                <h1>Gaming: 190%</h1>
-                <h1>Work: 134%</h1>
+                <h1>Gaming: {calculateGamingPC()}%</h1>
+                <h1>Work: {calculateWorkingPC()}%</h1>
             </div>
         </div>
     );

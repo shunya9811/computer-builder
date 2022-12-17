@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "downlevelIteration": true, // [... new Set()]を使うために追加した
     "lib": [
       "dom",
       "dom.iterable",

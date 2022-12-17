@@ -2,15 +2,19 @@ import React from "react";
 import './assets/css/App.css';
 import Header from "./components/Header";
 import Content from "./components/Content";
- 
+
+import { PcContextProvider } from "./context";
+
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <div>
-        <Content />
+    <PcContextProvider>
+      <div className="App">
+        <Header />
+        <div>
+          <Content />
+        </div>
       </div>
-    </div>
+    </PcContextProvider>
   );
 }
 
