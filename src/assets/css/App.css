@@ -1,9 +1,10 @@
 .App {
   text-align: center;
   width: 100vw;
-  
+  height: max-content;
   background-color: #b0c4de;
   padding: 0;
+  padding-bottom: 3rem;
   margin: 0;
 }
 
