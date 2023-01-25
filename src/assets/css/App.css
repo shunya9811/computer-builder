@@ -1,11 +1,12 @@
 .App {
   text-align: center;
   width: 100vw;
-  height: max-content;
+  height: 100%;
   background-color: #b0c4de;
   padding: 0;
   padding-bottom: 3rem;
   margin: 0;
+  background-size: cover;
 }
 
 h1,h2,h3,h4,p{
