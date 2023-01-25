@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/computer-builder/static/css/main.064a5036.css",
-    "main.js": "/computer-builder/static/js/main.e43b2402.js",
+    "main.css": "/computer-builder/static/css/main.ac227baa.css",
+    "main.js": "/computer-builder/static/js/main.46bbebc4.js",
     "static/js/787.7088673b.chunk.js": "/computer-builder/static/js/787.7088673b.chunk.js",
     "index.html": "/computer-builder/index.html",
-    "main.064a5036.css.map": "/computer-builder/static/css/main.064a5036.css.map",
-    "main.e43b2402.js.map": "/computer-builder/static/js/main.e43b2402.js.map",
+    "main.ac227baa.css.map": "/computer-builder/static/css/main.ac227baa.css.map",
+    "main.46bbebc4.js.map": "/computer-builder/static/js/main.46bbebc4.js.map",
     "787.7088673b.chunk.js.map": "/computer-builder/static/js/787.7088673b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.064a5036.css",
-    "static/js/main.e43b2402.js"
+    "static/css/main.ac227baa.css",
+    "static/js/main.46bbebc4.js"
   ]
 }
